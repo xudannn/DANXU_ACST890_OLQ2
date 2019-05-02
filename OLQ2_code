@@ -1,18 +1,35 @@
-#Q1a
 # Download the file into my AWS account and name it ‘structure.pdb’
 # In my AWS account
 curl -o structure.pdb  https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-11-regex--structure.pdb
 # Check if the file is there
 ls
-
-
-
-
-
+# Display the content of the file
+cat structure.pdb
+ 
+#Q1a 
+sed 's/Beisel/Weisel/' structure.pdb
 
 #Q1b
-#Q1c
+sed '1,3d' structure.pdb
+
+#Q1c	
+sed -n '5,10p' structure.pdb
+ 
 #Q1d
+sed '/MET/d' structure.pdb
+
 #Q1e
-#Q1f
+sed -n '/HELIX.*ILE/p' structure.pdb
+
+#Q1f	
+sed '/^H/s/$/***/' structure.pdb
+ 
 #Q1g
+sed '/SEQRES/s/^.*$/SEQ/' structure.pdb
+ 
+#Q1h
+# Download the file jabberwocky.txt from ilearn onto my pc, and then upload it to my AWS account
+scp -i 44332971.pem jabberwocky.txt ubuntu@ec2-54-252-141-71.ap-southeast-2.compute.amazonaws.com:
+# In my AWS account
+ls
+sed '/^[[:space:]]*$/d' jabberwocky.txt
