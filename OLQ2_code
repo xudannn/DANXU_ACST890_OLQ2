@@ -1,0 +1,18 @@
+#Q1a
+# Download the file into my AWS account and name it ‘structure.pdb’
+# In my AWS account
+curl -o structure.pdb  https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-11-regex--structure.pdb
+# Check if the file is there
+ls
+
+
+
+
+
+
+#Q1b
+#Q1c
+#Q1d
+#Q1e
+#Q1f
+#Q1g
